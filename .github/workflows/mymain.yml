@@ -39,5 +39,7 @@ jobs:
           SCKEY: ${{ secrets.SCKEY }}
           EMAIL: ${{ secrets.iKuuu_EMAIL }}
           PASSWD: ${{ secrets.iKuuu_PASSWD }}
+          DD_TOKEN: ${{ secrets.dd_token }}
+          DD_SECRET: ${{ secrets.dd_secret }}
         run: |
           python3 ./main.py
