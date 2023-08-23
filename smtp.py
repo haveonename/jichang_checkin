@@ -54,7 +54,7 @@ class Pusher:
         message['From'] = formataddr((str(Header('Airpot checkin', 'utf-8')), self.sender))
         message['To'] = self.receiver
         message['Subject'] = title
-
+        print("开始发送")
         smtp.sendmail(self.sender, [self.receiver], message.as_string())
 
 
@@ -95,6 +95,7 @@ def push(
             sender=config['smtp_sender'],
             receiver=config['smtp_receiver'],
         )
+        print("smtp参数配置完整")
         pusher.send(title, content)
         logging.info('SMTP 推送成功')
     except Exception as e:
