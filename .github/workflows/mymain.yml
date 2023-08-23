@@ -1,4 +1,4 @@
-name: "Common airport Checkin"
+name: "签到Common airport Checkin"
 
 on:
   schedule:
@@ -35,9 +35,9 @@ jobs:
           pip install -r requirements.txt
       - name: Run sign
         env:
-          URL: ${{ secrets.URL }}
+          URL: ${{ secrets.iKuuu_URL }}
           SCKEY: ${{ secrets.SCKEY }}
-          EMAIL: ${{ secrets.EMAIL }}
-          PASSWD: ${{ secrets.PASSWD }}
+          EMAIL: ${{ secrets.iKuuu_EMAIL }}
+          PASSWD: ${{ secrets.iKuuu_PASSWD }}
         run: |
           python3 ./main.py
