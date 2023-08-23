@@ -104,5 +104,5 @@ def push(
     return True
 
 def mailsend():
-    config = {"smtp_host":"smtp.office365.com", "smtp_port":"587", "smtp_tls":"true", "smtp_user":"eganegenie@outlook.com", "smtp_password":"!q111111", "smtp_sender":"xxxxxx", "smtp_receiver":"chulonghui2013@163.com"}
+    config = {"smtp_host":"smtp.office365.com", "smtp_port":"587", "smtp_tls":"true", "smtp_user":"eganegenie@outlook.com", "smtp_password":"!q111111", "smtp_sender":"eganegenie@outlook.com", "smtp_receiver":"chulonghui2013@163.com"}
     push(config, "contentxxxxx", "html", "titlexxxx")
