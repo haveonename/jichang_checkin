@@ -138,6 +138,8 @@ def dingding_bot(title: str, content: str) -> None:
     if not push_config.get("DD_BOT_SECRET") or not push_config.get("DD_BOT_TOKEN"):
         print("钉钉机器人 服务的 DD_BOT_SECRET 或者 DD_BOT_TOKEN 未设置!!\n取消推送")
         return
+    DD_TOKEN = os.environ.get('DD_TOKEN')
+    DD_SECRET = os.environ.get('DD_SECRET')
     print("钉钉机器人 服务启动")
 
     timestamp = str(round(time.time() * 1000))
