@@ -9,9 +9,6 @@ email = os.environ.get('EMAIL')
 passwd = os.environ.get('PASSWD')
 # server酱
 SCKEY = os.environ.get('SCKEY')
-# 钉钉
-DD_TOKEN = os.environ.get('DD_TOKEN')
-DD_SECRET = os.environ.get('DD_SECRET')
 
 login_url = '{}/auth/login'.format(url)
 check_url = '{}/user/checkin'.format(url)
