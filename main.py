@@ -44,8 +44,8 @@ try:
     print(result['msg'])
     content = result['msg']
     # 进行推送
-    smtp.push(smtpConfigDict, loginContent + "\n" + content, "", "iKuuu签到成功")
-    print("邮箱推送成功")
+    # smtp.push(smtpConfigDict, loginContent + "\n" + content, "", "iKuuu签到成功")
+    # print("邮箱推送成功")
     notify.dingding_bot("airport签到成功", loginContent + "\n" + content)
     print("钉钉推送成功")
     if SCKEY != '':
