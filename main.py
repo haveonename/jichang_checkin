@@ -1,4 +1,4 @@
-import requests, json, re, os
+import requests, json, re, os,notify
 
 session = requests.session()
 # 机场的地址
@@ -31,6 +31,7 @@ try:
     print(result['msg'])
     content = result['msg']
     # 进行推送
+    notify.dingding_bot("iKuuu签到成功", "xxxxx")
     if SCKEY != '':
         push_url = 'https://sctapi.ftqq.com/{}.send?title=机场签到&desp={}'.format(SCKEY, content)
         requests.post(url=push_url)
