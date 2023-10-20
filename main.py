@@ -46,7 +46,7 @@ try:
     # 进行推送
     # smtp.push(smtpConfigDict, loginContent + "\n" + content, "", "iKuuu签到成功")
     # print("邮箱推送成功")
-    notify.dingding_bot("airport签到成功", loginContent + "\n" + content)
+    notify.dingding_bot("airport签到成功", url + "\n" + loginContent + "\n" + content)
     print("钉钉推送成功")
     if SCKEY != '':
         push_url = 'https://sctapi.ftqq.com/{}.send?title=机场签到&desp={}'.format(SCKEY, content)
